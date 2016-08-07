@@ -12,7 +12,7 @@ WRONG_DISCIPLINE_TEXT = 'Unknown discipline name.\nTry again or type "/cancel" t
 SUCCESSFUL_ADDING_TEXT = 'Added successfully.'
 DISCIPLINES = ('Английский', 'АиСД', 'Дискретная математика', 'Теорвер и матстат', 'Матанализ')
 SCHEDULE_LINK = 'http://ruz.hse.ru/RUZService.svc/personlessons'
-SCHEDULE_LINK = '• {}–{}:{}\n\t\t\t\t{}.\n\t\t\t\t{} in aud. <b>#{}</b>\n'
+SCHEDULE_TEXT = '• {}–{}:{}\n\t\t\t\t{}.\n\t\t\t\t{} in aud. <b>#{}</b>\n'
 NO_TASKS_MESSAGE = 'No tasks! Hooray!'
 COMMANDS = '/start - Starts the bot\n' \
            '/menu - Shows the menu\n' \
