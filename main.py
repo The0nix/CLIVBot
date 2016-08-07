@@ -211,13 +211,14 @@ def check_schedule(message, st = datetime.datetime.today(), fin = datetime.date.
     for date in sorted(dates.keys()):
         text += '[{}]\n'.format(date.strftime('%d.%m.%Y'))
         for subj in dates[date]:
-            text += '• {}–{}:{}\n\t\t\t\t{}. Aud. <b>#{}</b>\n'.format(
+            text += SCHEDULE_TEXT.format(
                 subj.begin_lesson.strftime('%H:%M'),
                 subj.end_lesson.strftime('%H:%M'),
                 '' if subj.subgroup == SUBGROUP_BOTH else
                 '\n\t\t\t\t<b>(Subgroup 1)</b>' if subj.subgroup == SUBGROUP_1 else
                 '\n\t\t\t\t<b>(Subgroup 2)</b>',
                 subj.discipline,
+                subj.kind_of_work,
                 subj.auditorium
             )
         text += '\n'

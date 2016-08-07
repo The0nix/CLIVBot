@@ -8,13 +8,14 @@ class subject:
     """
     Obviously subject class.
     """
-    def __init__(self, discipline, subgroup, auditorium, date, begin_lesson, end_lesson):
+    def __init__(self, discipline, subgroup, auditorium, date, begin_lesson, end_lesson, kind_of_work):
         self.discipline = discipline
         self.subgroup = subgroup
         self.auditorium = auditorium
         self.date = date
         self.begin_lesson = begin_lesson
         self.end_lesson = end_lesson
+        self.kind_of_work = kind_of_work
 
 class WrongFormatError(BaseException):
     pass

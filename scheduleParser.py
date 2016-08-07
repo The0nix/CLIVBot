@@ -25,5 +25,6 @@ def parse_schedule(st, fin):
                               item['auditorium'],
                               datetime.datetime.strptime(item['date'], '%Y.%m.%d'),
                               datetime.datetime.strptime(item['beginLesson'], '%H:%M'),
-                              datetime.datetime.strptime(item['endLesson'], '%H:%M')))
+                              datetime.datetime.strptime(item['endLesson'], '%H:%M'),
+                              item['kindOfWork']))
     return result
