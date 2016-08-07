@@ -13,7 +13,7 @@ if __name__ == "__main__":
     print( 'HELLO %s' % str(sys.argv[1]))
     import os
     import os
-    port = os.environ['PORT']
+    port = 5000
     print(port)
 
 bot = telebot.TeleBot(BOT_TOKEN)
