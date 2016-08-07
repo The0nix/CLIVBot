@@ -8,13 +8,7 @@ from scheduleParser import parse_schedule
 from my_lib import *
 from consts import *
 from telebot import types
-if __name__ == "__main__":
-    import sys
-    print( 'HELLO %s' % str(sys.argv[1]))
-    import os
-    import os
-    port = 5000
-    print(port)
+
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
