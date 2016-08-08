@@ -31,7 +31,7 @@ class WrongDisciplineError(BaseException):
 
 def valid_date(date_text):
     """
-    Checks if date fits proper format
+    Checks if date fits proper format.
     """
     try:
         datetime.datetime.strptime(date_text, '%d.%m.%y')
@@ -40,6 +40,23 @@ def valid_date(date_text):
         return False
 
 def write_task(tasks, data):
+    """
+    Adds task from data to tasks.
+    tasks looks like:
+    {
+        discipline_1:
+        {
+            date_1: [task_1, ..., task_n],
+            ...
+            date_n: [task_1, ..., task_n],
+        },
+        ...
+        discipline_n
+    }
+    data looks like:
+    [discipline, date, task]
+    """
     tasks[data[0]] = tasks.get(data[0], {})
-    tasks[data[0]][data[1]] = tasks.get(data[1], [])
+    tasks[data[0]][data[1]] = tasks[data[0]].get(data[1], [])
     tasks[data[0]][data[1]].append(data[2])
+    return tasks

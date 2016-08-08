@@ -173,7 +173,7 @@ def add_task_enter(message):
 def add_task(message):
     """
     Checks if message contents proper task and if it does
-    adds it in tasks.pickle.
+    adds it to tasks.pickle.
     """
     if not re.match('.*;.*;.*', message.text): raise WrongFormatError
     data = [s.strip() for s in message.text.split(';')]
@@ -189,7 +189,7 @@ def add_task(message):
             tasks = {}
             with open('tasks.pickle', 'wb') as f:
                 pickle.dump(tasks, f)
-        write_task(tasks, data)
+        tasks = write_task(tasks, data)
     with open('tasks.pickle', 'wb') as f:
         pickle.dump(tasks, f)
     bot.send_message(message.chat.id, SUCCESSFUL_ADDING_TEXT)
