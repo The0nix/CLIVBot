@@ -3,12 +3,14 @@ import telebot
 import pickle
 import datetime
 import re
+import os
 from collections import defaultdict
 from scheduleParser import parse_schedule
 from my_lib import *
 from consts import *
 from telebot import types
 
+BOT_TOKEN = os.environ['CLIVBOT_TOKEN']
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
