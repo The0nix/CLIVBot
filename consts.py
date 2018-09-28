@@ -1,4 +1,3 @@
-BOT_TOKEN = '234891684:AAFBx9W0Ona57eE7_hDSPSowQMib5L4vzJ4'
 HELP_MESSAGE = 'You can use this bot to check CLIV\'s schedule and hometasks.'
 START_MESSAGE_PRIVATE = "Choose what you want to do:"
 CHECK_SCHEDULE_TEXT = 'Check schedule'
